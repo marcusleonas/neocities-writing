@@ -42,7 +42,8 @@ blockquote {
     border-left: 2px solid var(--green);
 }
 
-.drop::first-letter {
+.drop::first-letter,
+article > p:first-of-type::first-letter {
     float: left;
     font-size: 2rem;
     line-height: 0.65;
