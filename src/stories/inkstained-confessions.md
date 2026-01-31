@@ -4,6 +4,8 @@ date: 2025-08-08
 summary: Kaveh's working late again on a design, getting frustrated by a ever changing list of requirements. Alhaitham notices that Kaveh hasn't eaten and invites him to the kitchen. The air between then tightens until Alhaitham states what has been hidden, Kaveh likes him. In a sudden, breath-filled moment, Kaveh confesses too.
 ---
 
+[Read on AO3](https://archiveofourown.org/works/68864236)
+
 > Hello! This is my first fan fiction so sorry if its not perfect or too short! Enjoy!
 
 Kaveh lets out a loud sigh and groans, “Something’s off… what is it,” His
