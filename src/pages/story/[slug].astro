@@ -1,0 +1,28 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import BaseLayout from "../../layout/BaseLayout.astro";
+import PageLayout from "../../layout/PageLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("stories");
+    return posts.map((entry) => ({
+        params: { slug: entry.id },
+        props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title}>
+    <PageLayout>
+        <a href="/">&larr; go back</a>
+        <h1>{entry.data.title}</h1>
+        <p>posted: {new Date(entry.data.date).toLocaleDateString("en-GB")}</p>
+        <hr style="margin-top:5px;margin-bottom:5px;" />
+        <article>
+            <Content />
+        </article>
+    </PageLayout>
+</BaseLayout>

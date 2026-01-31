@@ -1,10 +1,29 @@
 ---
 import BaseLayout from "../layout/BaseLayout.astro";
 import PageLayout from "../layout/PageLayout.astro";
+
+import { getCollection } from "astro:content";
+
+const stories = (await getCollection("stories")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
 ---
 
 <BaseLayout title="home">
     <PageLayout>
         <h2>Stories</h2>
+        <div class="scroll">
+            {
+                stories.map((story) => (
+                    <div class="story-card">
+                        <a href={`/story/${story.id}`}>
+                            [ {new Date(story.data.date).toLocaleDateString()} ]: {story.data.title}
+                        </a>
+                        <p>{story.data.summary}</p>
+                    </div>
+                    <hr>
+                ))
+            }
+        </div>
     </PageLayout>
 </BaseLayout>
