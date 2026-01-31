@@ -36,6 +36,12 @@ hr {
     margin: 10px 0;
 }
 
+blockquote {
+    margin: 0;
+    padding-left: 10px;
+    border-left: 2px solid var(--green);
+}
+
 .drop::first-letter {
     float: left;
     font-size: 2rem;
