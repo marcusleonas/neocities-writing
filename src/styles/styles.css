@@ -1,0 +1,84 @@
+:root {
+    --green: #375c34;
+}
+
+body {
+    background: hsl(47.6, 44.7%, 85.1%);
+    font-family: "Libre Baskerville", serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-variant: small-caps;
+    text-underline-offset: 3px;
+    text-decoration: underline dotted var(--green);
+    color: var(--green);
+}
+
+a {
+    color: var(--green);
+}
+
+a:hover {
+    text-decoration: underline dotted;
+    font-weight: 700;
+}
+
+.drop::first-letter {
+    float: left;
+    font-size: 2rem;
+    line-height: 0.65;
+    margin: 0.1em 0.1em 0.2em 0;
+    color: var(--green);
+}
+
+.back-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    width: 950px;
+    height: 780px;
+    padding: 20px 30px 30px 70px;
+    background: url("https://file.garden/aXdBx1DU1BidR1It/book_background.png")
+        no-repeat;
+    background-size: 950px 780px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content .left,
+.content .right {
+    max-height: 780px;
+    overflow-y: auto;
+}
+
+.content .left {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.content .right {
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
